@@ -1,7 +1,6 @@
 pip>=24.0
 seaborn
 pillow
-io
 matplotlib
 streamlit
 pickle5
