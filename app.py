@@ -16,7 +16,7 @@ if rad=='Potato Leaf Disease Detection':
     st.write("Disease that can be detected are:-['Early Blight','Late Blight']")
     image=st.file_uploader("Upload image")
     CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
-    MODEL = tf.keras.models.load_model(r"plant_leaf_disease_detection\1")
+    MODEL = tf.keras.models.load_model(r"plant_leaf_disease_detection\potatoes_model.h5")
     if st.button("Submit"):
         size=(256,256)
         image = np.array((Image.open(image)).resize(size))
@@ -38,7 +38,7 @@ if rad=='Apple Leaf Disease Detection':
  'Apple___Black_rot',
  'Apple___Cedar_apple_rust',
  'Apple___healthy']
-    MODEL = tf.keras.models.load_model(r"plant_leaf_disease_detection\2")
+    MODEL = tf.keras.models.load_model(r"plant_leaf_disease_detection\apple_model.h5")
     if st.button("Submit"):
         size=(256,256)
         image = np.array((Image.open(image)).resize(size))
@@ -57,7 +57,7 @@ if rad=='Bell Pepper Leaf Disease Detection':
     st.write("Disease that can be detected are:-['Pepper__bell___Bacterial_spot']")
     image=st.file_uploader("Upload image")
     CLASS_NAMES = ['Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy']
-    MODEL = tf.keras.models.load_model(r"plant_leaf_disease_detection\3")
+    MODEL = tf.keras.models.load_model(r"plant_leaf_disease_detection\bell.h5")
     if st.button("Submit"):
         size=(256,256)
         image = np.array((Image.open(image)).resize(size))
