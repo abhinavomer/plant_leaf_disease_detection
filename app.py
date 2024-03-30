@@ -16,7 +16,7 @@ if rad=='Potato Leaf Disease Detection':
     st.write("Disease that can be detected are:-['Early Blight','Late Blight']")
     image=st.file_uploader("Upload image")
     CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
-    MODEL = tf.keras.models.load_model("plant_leaf_disease_detection\potatoes_model.h5")
+    MODEL = tf.keras.models.load_model("plant_leaf_disease_detection\1")
     if st.button("Submit"):
         size=(256,256)
         image = np.array((Image.open(image)).resize(size))
