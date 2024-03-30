@@ -25,7 +25,7 @@ if rad=='Potato Leaf Disease Detection':
         predictions = MODEL.predict(img_batch)
 
         predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
-        confidence = np.max(predictions[0])
+        confidence = (np.max(predictions[0])*100)
         st.write("Class:",predicted_class,)
         st.write("Confidence:",confidence)
 if rad=='Apple Leaf Disease Detection':
@@ -47,7 +47,7 @@ if rad=='Apple Leaf Disease Detection':
         predictions = MODEL.predict(img_batch)
 
         predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
-        confidence = np.max(predictions[0])
+        confidence =(np.max(predictions[0])*100)
         st.write("Class:",predicted_class,)
         st.write("Confidence:",confidence)
 if rad=='Bell Pepper Leaf Disease Detection':
@@ -66,6 +66,6 @@ if rad=='Bell Pepper Leaf Disease Detection':
         predictions = MODEL.predict(img_batch)
 
         predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
-        confidence = np.max(predictions[0])
+        confidence =(np.max(predictions[0])*100)
         st.write("Class:",predicted_class,)
         st.write("Confidence:",confidence)
