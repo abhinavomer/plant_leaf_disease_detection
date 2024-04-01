@@ -8,6 +8,7 @@ if rad=='Home':
     st.title('Plant Leaf Dection App')
     st.image("pldd.jpg")
     st.write("Welcome to the app!")
+    st.write("Convolutional Neural Networks (CNNs) have revolutionized the field of image recognition and are now being applied to the critical task of plant leaf disease detection. By training on vast datasets of leaf images, CNNs learn to identify intricate patterns and anomalies that signify various diseases. This automated detection is not only remarkably accurate but also swift, enabling early intervention and treatment. The implications for agriculture are profound, as early disease detection is key to maintaining healthy crops, ensuring food security, and reducing economic losses for farmers. The use of CNNs in this domain exemplifies the transformative potential of artificial intelligence in addressing real-world challenge")
     st.balloons()
 if rad=='Potato Leaf Disease Detection':
 
