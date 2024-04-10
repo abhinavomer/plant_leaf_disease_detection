@@ -3,7 +3,7 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-rad=st.sidebar.radio("Navigation",['Home','Potato Leaf Disease Detection','Apple Leaf Disease Detection','Bell Pepper Leaf Disease Detection'])
+rad=st.sidebar.radio("Navigation",['Home','Potato Leaf Disease Detection','Apple Leaf Disease Detection','Bell Pepper Leaf Disease Detection','Corn Leaf Disease Detection'])
 if rad=='Home':
     st.title('Plant Leaf Dection App')
     st.image("pldd.jpg")
@@ -27,6 +27,25 @@ if rad=='Potato Leaf Disease Detection':
 
         predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
         confidence = (np.max(predictions[0])*100)
+        st.write("Class:",predicted_class,)
+        st.write("Confidence:",confidence)
+if rad=='Corn Leaf Disease Detection':
+
+    st.image("cl.jpg")
+    st.title("Corn Leaf Disease Detection")
+    st.write("Disease that can be detected are:-['Blight', 'Common_Rust', 'Gray_Leaf_Spot']")
+    image=st.file_uploader("Upload image")
+    CLASS_NAMES = ['Blight', 'Common_Rust', 'Gray_Leaf_Spot', 'Healthy']
+    MODEL = tf.keras.models.load_model("corn_model.h5")
+    if st.button("Submit"):
+        size=(256,256)
+        image = np.array((Image.open(image)).resize(size))
+        img_batch = np.expand_dims(image, 0)
+        
+        predictions = MODEL.predict(img_batch)
+
+        predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
+        confidence = np.max(predictions[0]*100)
         st.write("Class:",predicted_class,)
         st.write("Confidence:",confidence)
 if rad=='Apple Leaf Disease Detection':
