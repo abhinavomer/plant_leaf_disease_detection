@@ -3,7 +3,7 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-rad=st.sidebar.radio("Navigation",['Home','Potato Leaf Disease Detection','Apple Leaf Disease Detection','Bell Pepper Leaf Disease Detection','Corn Leaf Disease Detection'])
+rad=st.sidebar.radio("Navigation",['Home','Potato Leaf Disease Detection','Apple Leaf Disease Detection','Tomato Disease Detection','Bell Pepper Leaf Disease Detection','Corn Leaf Disease Detection'])
 if rad=='Home':
     st.title('Plant Leaf Dection App')
     st.image("pldd.jpg")
@@ -27,6 +27,33 @@ if rad=='Potato Leaf Disease Detection':
 
         predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
         confidence = (np.max(predictions[0])*100)
+        st.write("Class:",predicted_class,)
+        st.write("Confidence:",confidence)
+if rad=='Tomato Disease Detection':
+
+    st.image("tl.jpg")
+    st.title("Tomato Disease Detection")
+    st.write("Disease that can be detected are:-['Tomato___Bacterial_spot','Tomato___Early_blight','Tomato___Late_blight','Tomato___Leaf_Mold','Tomato___Septoria_leaf_spot','Tomato___Spider_mites Two-spotted_spider_mite','Tomato___Target_Spot','Tomato___Tomato_Yellow_Leaf_Curl_Virus','Tomato___Tomato_mosaic_virus']")
+    image=st.file_uploader("Upload image")
+    CLASS_NAMES = ['Tomato___Bacterial_spot',
+ 'Tomato___Early_blight',
+ 'Tomato___Late_blight',
+ 'Tomato___Leaf_Mold',
+ 'Tomato___Septoria_leaf_spot',
+ 'Tomato___Spider_mites Two-spotted_spider_mite',
+ 'Tomato___Target_Spot',
+ 'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
+ 'Tomato___Tomato_mosaic_virus']
+    MODEL = tf.keras.models.load_model("tomato_model.h5")
+    if st.button("Submit"):
+        size=(128,128)
+        image = np.array((Image.open(image)).resize(size))
+        img_batch = np.expand_dims(image, 0)
+        
+        predictions = MODEL.predict(img_batch)
+
+        predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
+        confidence = np.max(predictions[0]*100)
         st.write("Class:",predicted_class,)
         st.write("Confidence:",confidence)
 if rad=='Corn Leaf Disease Detection':
