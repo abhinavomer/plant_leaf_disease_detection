@@ -1,5 +1,7 @@
 # Plant Leaf Disease Detection using CNN
 
+![banner](https://github.com/abhinavomer/plant_leaf_disease_detection/blob/main/pldd.jpg)
+
 ## Introduction
 This project aims to detect plant leaf diseases using a Convolutional Neural Network (CNN). It's designed to assist farmers and botanists in early disease detection, which is crucial for crop management and yield optimization.
 
