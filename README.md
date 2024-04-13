@@ -1,14 +1,65 @@
 # Plant Leaf Disease Detection using CNN
 
 ![banner](https://github.com/abhinavomer/plant_leaf_disease_detection/blob/main/pldd.jpg)
+## Overview
 
-## Introduction
-This project aims to detect plant leaf diseases using a Convolutional Neural Network (CNN). It's designed to assist farmers and botanists in early disease detection, which is crucial for crop management and yield optimization.
+The Plant Leaf Detection App is an interactive web application that enables users to detect diseases in plant leaves using convolutional neural networks (CNNs). By leveraging deep learning models trained on vast datasets of leaf images, the app can accurately identify various diseases in plant leaves. This early detection capability is crucial for ensuring crop health, preventing the spread of diseases, and minimizing economic losses for farmers. The app covers a range of crops, including potatoes, tomatoes, corn, apples, and bell peppers, offering tailored disease detection for each plant type.
 
-## Project Overview
-- **Objective**: To accurately identify and classify plant leaf diseases from images.
-- **Methodology**: Utilizes a CNN model trained on a dataset of leaf images with various disease manifestations.
-- **Technologies Used**: Python, TensorFlow/Keras, and other machine learning libraries.
+## Features
+
+- **Navigation Menu**: Users can navigate between different plant types (potatoes, tomatoes, corn, apples, bell peppers) to detect diseases specific to each plant.
+- **Image Upload**: Users can upload images of plant leaves directly to the application for disease detection.
+- **Disease Detection**: The app utilizes pre-trained deep learning models to predict the presence of diseases in the uploaded plant leaf images.
+- **Prediction Display**: The predicted disease class along with the confidence score is displayed to the user.
+
+## Supported Plant Types and Diseases
+
+### Potato Leaf Disease Detection
+- Early Blight
+- Late Blight
+
+### Tomato Leaf Disease Detection
+- Tomato Bacterial Spot
+- Tomato Early Blight
+- Tomato Late Blight
+- Tomato Leaf Mold
+- Tomato Septoria Leaf Spot
+- Tomato Spider Mites Two-Spotted Spider Mite
+- Tomato Target Spot
+- Tomato Tomato Yellow Leaf Curl Virus
+- Tomato Tomato Mosaic Virus
+
+### Corn Leaf Disease Detection
+- Blight
+- Common Rust
+- Gray Leaf Spot
+
+### Apple Leaf Disease Detection
+- Apple Apple Scab
+- Apple Black Rot
+- Apple Cedar Apple Rust
+
+### Bell Pepper Leaf Disease Detection
+- Pepper Bell Bacterial Spot
+
+## Technologies Used
+
+- **Streamlit**: An open-source Python library used for building interactive web applications.
+- **NumPy**: A fundamental package for scientific computing with Python used for numerical operations.
+- **PIL (Python Imaging Library)**: A library for opening, manipulating, and saving many different image file formats.
+- **TensorFlow**: An open-source machine learning framework for building and deploying machine learning models.
+- **Requests**: A Python library for making HTTP requests used for fetching images from URLs.
+
+## Usage
+
+1. **Navigation**: Select the desired plant type from the navigation menu.
+2. **Upload Image**: Click on the "Upload image" button to select and upload an image of a plant leaf.
+3. **Prediction**: After uploading the image, click the "Submit" button to detect diseases in the plant leaf.
+4. **View Result**: The application will display the predicted disease class along with the confidence score.
+
+## Acknowledgements
+
+The Plant Leaf Detection App is made possible by the collaborative efforts of developers, data scientists, and machine learning engineers who contributed to building and deploying the deep learning models for disease detection. Their dedication and expertise in machine learning and web development have enabled the creation of this interactive application.
 
 ## Features
 - **Disease Identification**: The CNN model recognizes multiple diseases, providing a diagnosis based on leaf images.
