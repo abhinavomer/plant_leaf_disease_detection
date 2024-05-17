@@ -49,6 +49,7 @@
 - **NumPy**: A fundamental package for scientific computing with Python used for numerical operations.
 - **PIL (Python Imaging Library)**: A library for opening, manipulating, and saving many different image file formats.
 - **TensorFlow**: An open-source machine learning framework for building and deploying machine learning models.
+- **Matplotlib & Saeborn**:Data Visualization Libraries used for visualizing images and their augmentation.
 
 ## Usage
 
