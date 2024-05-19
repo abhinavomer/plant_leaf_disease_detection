@@ -3,7 +3,7 @@
 ![banner](https://github.com/abhinavomer/plant_leaf_disease_detection/blob/main/pldd.jpg)
 ## Overview
 
-- The Plant Leaf Detection App is an interactive web application that enables users to detect diseases in plant leaves using convolutional neural networks (CNNs). By leveraging deep learning models trained on vast datasets of leaf images, the app can accurately identify various diseases in plant leaves. This early detection capability is crucial for ensuring crop health, preventing the spread of diseases, and minimizing economic losses for farmers. The app covers a range of crops, including potatoes, tomatoes, corn, apples, and bell peppers, offering tailored disease detection for each plant type.
+- The Plant Leaf Detection App is an interactive web application that enables users to detect diseases in plant leaves using convolutional neural networks (CNNs). By leveraging deep learning models trained on vast datasets of leaf images, the app can accurately identify various diseases in plant leaves. This early detection capability is crucial for ensuring crop health, preventing the spread of diseases, and minimizing economic losses for farmers. The app covers a range of crops, including potatoes, tomatoes, corn, apples, and bell peppers, offering disease detection for each plant type.
 - Different Data Augmentation techniques are used for better accuracy.
 
 ## Features
